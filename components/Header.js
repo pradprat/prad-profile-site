@@ -17,7 +17,7 @@ export default function Header({}) {
     const bg = useColorModeValue("white", "gray.800");
     const mobileNav = useDisclosure();
     return (
-        <chakra.header bg={bg} px={{ base: 2, sm: 4 }} py={4} position="absolute" top={0} width="100%">
+        <chakra.header bg={'transparent'} px={{ base: 2, sm: 4 }} py={4} position="absolute" top={0} width="100%">
             <Flex justifyContent="space-between" mx="auto">
                 <Flex></Flex>
                 <HStack display="flex" alignItems="center" spacing={1}>

@@ -3,12 +3,12 @@ import Header from "@components/Header";
 import Footer from "@components/Footer";
 import { Flex, HStack, Button } from "@chakra-ui/react";
 import styles from "./index.module.scss";
-import photo from "../assets/images/me2.jpg";
+import photo from "../assets/images/me3.png";
 export default function Home() {
     return (
-        <div className="container" style={{ minHeight: "100vh" }}>
+        <div className="container">
             <Head>
-                <title>Next.js Starter!</title>
+                <title>Profile Pradika</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
@@ -16,19 +16,20 @@ export default function Home() {
                 <Header />
                 <HStack>
                     <div className={styles.photo}>
-                        <img src={photo.src}></img>
+                        <img src={photo.src} style={{ objectFit: "fill" }}></img>
                     </div>
-                    <div>
-                        <h3>Hello, i'm</h3>
-                        <h1>Pradika Fitra Pratama</h1>
-                        <h2>Front-End Web Developer</h2>
-                        <p>
+                    <div className={styles.mainIntro}>
+                        <h3 className={styles.greeting}>Hello, i'm</h3>
+                        <h1 className={styles.name}>Pradika Fitra Pratama</h1>
+                        <h2 className={styles.position}>Front-End Web Developer</h2>
+                        <p className={styles.summary}>
                             with 2+ Years of experience using React JS Framework. Had experience
                             building small to medium-size web applications especially making
                             Reporting dashboard and Product Catalogue
                         </p>
                     </div>
                 </HStack>
+                <Footer />
             </main>
             {/* <Footer /> */}
         </div>
